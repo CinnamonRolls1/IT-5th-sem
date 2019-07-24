@@ -1,0 +1,49 @@
+body,
+html {
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Helvetica;
+  line-height: 1.7;
+  color: #666;
+  background-color: #FFFBDE;
+}
+
+
+
+.main-title {
+	font-family: Helvetica;
+	font-size: 45px;
+	color: #66C3CC;
+	padding-left: 10px;
+
+}
+
+.pan{
+  position: relative;
+  text-align: center;
+}
+.overlay{
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 43%;
+  left: 27%;
+  visibility:hidden;
+  transition: 0.15s;
+
+}
+.pan:hover .overlay{
+  visibility: visible;
+}
+
+.pan img{
+  margin-left:-15px;
+	transition: 0.15s;
+	-webkit-filter: blur(0px) brightness(70%);
+}
+
+.pan img:hover {
+	-webkit-filter: blur(3px) brightness(40%);
+
+}
