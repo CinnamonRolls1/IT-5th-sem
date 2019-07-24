@@ -16,6 +16,8 @@ html {
 	font-size: 45px;
 	color: #66C3CC;
 	padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 
@@ -46,4 +48,29 @@ html {
 .pan img:hover {
 	-webkit-filter: blur(3px) brightness(40%);
 
+}
+
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B37899;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #81AEB3;
 }
