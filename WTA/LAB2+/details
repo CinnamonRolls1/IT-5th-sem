@@ -1,12 +1,13 @@
 topic: 
 
-1 personal website
+//1 personal website
 2 e-commerce, fashion and home goods
 
 modules:
-1.1 one page site?
-1.2 past work/contact
-2.1 order page for each product (main/home)
+//1.1 one page site?
+//1.2 past work/contact
+
+2.1 swipe between home goods and fashion, clean minimal
 2.2 product page w all products (use parallax)
 2.3 contact
 
