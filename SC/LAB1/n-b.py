@@ -31,9 +31,12 @@ def naive_bayes_predict(data_x, data_y, x):
             res_y[i] = 1
 """
 df=pd.read_csv('SPECT.csv')
+df=df.sample(frac=1)
 x = df.drop(['Class'],axis=1)
 y = df.iloc[:, 0] == 'Yes'
 df['Class']=y
+
+
 #print(df)
 
 #for i in range(10):
