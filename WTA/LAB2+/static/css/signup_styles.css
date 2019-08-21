@@ -1,0 +1,68 @@
+body,
+html {
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Libre Caslon Text;
+  line-height: 1;
+  color: #666;
+  background-color: #FFFFFF;
+
+}
+
+.full-container{
+	width: 400px;
+	height: 250px;
+	background-color: #19FFBB;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 250px;
+	right: 0;
+  	
+	margin: auto;
+	
+}
+
+#signup-container{
+	width: 250px;
+	height: 250px;
+	background-color: #B214CC;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: -650px;
+	right: 0;
+  	
+	margin: auto;
+}
+
+#welcome-text{
+
+	font-family: Archivo Black;
+	font-size: 72px;
+	padding:15px;
+	color: #444;
+
+	/*padding-left:15px;*/
+	
+}
+
+
+#welcome-text a{
+	font-family: Archivo Black;
+	font-size: 72px;
+	color: #19FFBB;
+	transition: 0.5s;
+	/*text-shadow: 3px 3px 0 #FF9100;*/
+	
+	-webkit-text-stroke: 2px #444;
+
+}
+
+#welcome-text a:hover {
+	
+	color:#FFBA00;
+	-webkit-text-stroke: 2px #000000;
+}
