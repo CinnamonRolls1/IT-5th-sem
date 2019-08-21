@@ -28,7 +28,7 @@ double cos_t(double x)
 		fact = fact *(i+1)*(i+2);
 		double term = sign * pow(x,i+2)/fact; 
 		cos += term;
-
+a
 		sign*=-1;
 	}
 	return cos;

@@ -2,7 +2,7 @@
 using namespace std;
 #include <omp.h>
 
-#define LEN 250
+#define LEN 512
 
 void mat_mult(double a[][LEN], double b[][LEN],double c[][LEN], int m, int n, int p)
 {
@@ -46,14 +46,14 @@ int main(int argc, char const *argv[])
 	double end = omp_get_wtime();
 
 
-	for(int i=0;i<m;i++)
-	{
-		for(int j=0;j<n;j++)
-		{
-			cout<<c[i][j]<<' ';
-		}
-		cout<<endl;
-	}
+	// for(int i=0;i<m;i++)
+	// {
+	// 	for(int j=0;j<n;j++)
+	// 	{
+	// 		cout<<c[i][j]<<' ';
+	// 	}
+	// 	cout<<endl;
+	// }
 
 	cout<<"Time Taken: "<<end-beg<<endl;
 

@@ -51,30 +51,26 @@ int main()
 	{
 		long int i = 0;
 		#pragma omp for nowait 
-		for(i = 0; i<1000 ;i++){
+		for(i = 0; i<1000000 ;i++){
 			y = cos_t(i);
-
 		}
 
 		long int j = 0;
 		#pragma omp for nowait
-		for(j =0; j<1000 ; j++){
+		for(j =0; j<1000000 ; j++){
 			x = j*j;
-
 		}
 
 
 		long int k =0;
 		#pragma omp single 
-		for(k=0;k<1000;k++){
+		for(k=0;k<1000000;k++){
 			z = sin_t(i);
-
 		}
 
 	}
 
 	double end = omp_get_wtime();
-
 	printf("Time taken %lf \n", end-beg);
 	return 0;
 

@@ -2,30 +2,28 @@
 using namespace std;
 #include <omp.h>
 
-#define LEN 250
+#define LEN 512
 
 
 void mat_mult(double a[][LEN], double b[][LEN],double c[][LEN], int m, int n, int p)
 {
 	omp_set_num_threads(8);
-	#pragma omp parallel
-	{
-
-		
-		for(int i=0;i<m;i++)
+	int i,j,k;
+	#pragma omp parallel for private(i,j,k) shared(m,n,p)
+		for(i=0;i<m;i++)
 		{
-			#pragma omp for
-			for(int j=0;j<n;j++)
+			// #pragma omp for
+			for(j=0;j<n;j++)
 			{
-				
-				#pragma omp parallel for reduction(+:c[i][j])
-				for(int k=0;k<p;k++)
+
+				// #pragma omp parallel for reduction(+:c[i][j])
+				for(k=0;k<p;k++)
 				{
 					c[i][j] += a[i][k]*b[k][j];
 				}
 			}
 		}
-	}
+	
 }
 
 int main(int argc, char const *argv[])
@@ -52,14 +50,14 @@ int main(int argc, char const *argv[])
 	mat_mult(a,b,c,m,n,p);
 	double end = omp_get_wtime();
 
-	for(int i=0;i<m;i++)
-	{
-		for(int j=0;j<n;j++)
-		{
-			cout<<c[i][j]<<' ';
-		}
-		cout<<endl;
-	}
+	// for(int i=0;i<m;i++)
+	// {
+	// 	for(int j=0;j<n;j++)
+	// 	{
+	// 		cout<<c[i][j]<<' ';
+	// 	}
+	// 	cout<<endl;
+	// }
 
 	cout<<"Time Taken: "<<end-beg<<endl;
 
