@@ -21,9 +21,9 @@ class Perceptron() :
 		self.bias = random.uniform(-1,1)
 		#self.bias =0
 
-		'''print("Initial Weights: ",self.weights)
-		print("Initial threshold: ",self.threshold)
-		print("Initial bias: ",self.bias,"\n")'''
+		print("Weights: ",self.weights)
+		print("Threshold: ",self.threshold)
+		print("Bias: ",self.bias,"\n")
 
 		
 		for i in range(num_epochs) :
@@ -34,7 +34,9 @@ class Perceptron() :
 				predicted_val = self.prediction_i(row_i)
 
 				error = ground_val - predicted_val
+
 				correction_term = error*lr
+				
 
 				#print('error',error)
 				#print('correction_term',correction_term)
@@ -74,7 +76,7 @@ class Perceptron() :
 		if intermediateValue > self.threshold :
 			y=1
 
-		else :
+		else:
 			y=0
 
 		return y
@@ -117,4 +119,4 @@ classifier = Perceptron()
 accuracy = cross_fold_validation(classifier,X,np.asarray(y))
 
 
-print(np.asarray(accuracy).mean())
+print("Accuracy:", np.asarray(accuracy).mean())
