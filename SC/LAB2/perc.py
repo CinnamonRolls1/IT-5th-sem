@@ -3,7 +3,7 @@ import pandas as pd
 import random
 from sklearn.metrics import accuracy_score
 
-from cross_fold_validation import cross_fold_validation
+from cross import cross_fold_validation
 
 class Perceptron() :
 
