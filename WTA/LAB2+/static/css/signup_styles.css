@@ -13,21 +13,21 @@ html {
 .full-container{
 	width: 500px;
 	height: 250px;
-	background-color: #19FFBB;
+	background-color: #CCC014;
 	position: absolute;
 	top:0;
 	bottom: 0;
 	left: 500px;
 	right: 0;
-  	
+
 	margin: auto;
 	
 }
 
 #signup-container{
 	width: 500px;
-	height: 340px;
-	background-color: #B214CC;
+	height: 350px;
+	background-color: #99933D;
 	position: absolute;
 	top:0;
 	bottom: 0;
@@ -52,16 +52,19 @@ form li{
 	margin-top: 5px;
 	margin-left: 300px;
 	font-size:18px;
-	color: #444;
-	background-color: white;
+	color: white;
+	background-color: transparent;
 	font-family: Archivo Black;
 	border-style: none;
+	transition: 0.5s;
 	outline-style: dashed;
-	outline-color: black;
+	outline-color: transparent;
+	outline-width: 2px;
 }
 
-
-
+[type="submit"]:hover {
+	outline-color: white;
+}
 
 #welcome-text{
 
@@ -78,7 +81,7 @@ form li{
 #welcome-text a{
 	font-family: Archivo Black;
 	font-size: 72px;
-	color: #19FFBB;
+	color: #CCC014;
 	transition: 0.5s;
 	/*text-shadow: 3px 3px 0 #FF9100;*/
 	
@@ -88,6 +91,6 @@ form li{
 
 #welcome-text a:hover {
 	
-	color:#FFBA00;
+	color:#FFBB00;
 	-webkit-text-stroke: 2px #000000;
 }
