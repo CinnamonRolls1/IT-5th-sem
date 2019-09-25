@@ -10,4 +10,18 @@ function scrollFunction() {
   }
 }
 
-// incomplete, not working
+// incomplete, not working^
+
+
+var fb = document.getElementById("fb");
+var but = document.getElementById("btn");
+
+but.onclick = function () {
+	fb.style.display = "block";
+}
+
+window.onclick = function(event) {
+  if (event.target == fb) {
+    fb.style.display = "none";
+  }
+}
