@@ -32,12 +32,12 @@ def input_E(num_edges) :
 #E =input_E(5)
 
 E = [[0,2],[2,4],[1,0],[2,1],[1,3]]
-print("Edge List:",E)
+print("\nEdge List:",E)
 V = get_V(E)
-print("Nodes: ",V)
+print("\nNodes: ",V)
 G = [[] for i in range(len(V))]
 input_graph(G,E,V)
-print("Adjacency list:")
+print("\nAdjacency list:")
 for i in range(len(G)):
 	print(i, G[i])
 
@@ -61,4 +61,5 @@ def check_deadlock(G,probe) :
 	return (b or False)
 
 
+print("\nInitiating with [0, 0, 2]...")
 print(check_deadlock(G,[0,0,2]))
