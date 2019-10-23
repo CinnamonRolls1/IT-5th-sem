@@ -1,0 +1,14 @@
+{
+  "name": "simplewebrtc-messenger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "html": "^1.0.0"
+  }
+}
