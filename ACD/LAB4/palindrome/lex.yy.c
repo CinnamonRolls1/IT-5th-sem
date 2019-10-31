@@ -464,13 +464,11 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "pal.l"
 #line 2 "pal.l"
-	/* Definition section */
 	#include <stdio.h> 
 	#include <stdlib.h> 
 	#include "y.tab.h" 
 /* %option noyywrap */
-/* Rule Section */
-#line 474 "lex.yy.c"
+#line 472 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -688,10 +686,10 @@ YY_DECL
 		}
 
 	{
-#line 11 "pal.l"
+#line 9 "pal.l"
 
 
-#line 695 "lex.yy.c"
+#line 693 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -750,26 +748,26 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 13 "pal.l"
+#line 11 "pal.l"
 {yylval.f = yytext; return STR;} 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 14 "pal.l"
+#line 12 "pal.l"
 {return yytext[0];} 
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 15 "pal.l"
+#line 13 "pal.l"
 {;} 
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "pal.l"
+#line 15 "pal.l"
 ECHO;
 	YY_BREAK
-#line 773 "lex.yy.c"
+#line 771 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1770,7 +1768,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 17 "pal.l"
+#line 15 "pal.l"
 
 
 

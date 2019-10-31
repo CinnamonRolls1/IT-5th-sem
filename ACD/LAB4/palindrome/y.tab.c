@@ -64,7 +64,6 @@
 /* Copy the first part of user declarations.  */
 #line 1 "pal.y" /* yacc.c:339  */
  
-	/* Definition section */
 	#include <stdio.h> 
 	#include <string.h> 
 	#include <stdlib.h> 
@@ -76,7 +75,7 @@
 	int i; 
 	int k =0;	 
 
-#line 80 "y.tab.c" /* yacc.c:339  */
+#line 79 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -122,11 +121,11 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 15 "pal.y" /* yacc.c:355  */
+#line 14 "pal.y" /* yacc.c:355  */
  
 	char* f; 
 
-#line 130 "y.tab.c" /* yacc.c:355  */
+#line 129 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -143,7 +142,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 147 "y.tab.c" /* yacc.c:358  */
+#line 146 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -440,7 +439,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    25,    25,    57
+       0,    24,    24,    56
 };
 #endif
 
@@ -1205,7 +1204,7 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 25 "pal.y" /* yacc.c:1646  */
+#line 24 "pal.y" /* yacc.c:1646  */
     { 
 		flag = 0; 
 		k = strlen((yyvsp[0].f)) - 1; 
@@ -1236,17 +1235,17 @@ yyreduce:
 
 		} 
 	}
-#line 1240 "y.tab.c" /* yacc.c:1646  */
+#line 1239 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 57 "pal.y" /* yacc.c:1646  */
+#line 56 "pal.y" /* yacc.c:1646  */
     {(yyval.f) = (yyvsp[0].f);}
-#line 1246 "y.tab.c" /* yacc.c:1646  */
+#line 1245 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1250 "y.tab.c" /* yacc.c:1646  */
+#line 1249 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1474,7 +1473,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 60 "pal.y" /* yacc.c:1906  */
+#line 59 "pal.y" /* yacc.c:1906  */
  
 
 void yyerror(char *msg) 

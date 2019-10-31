@@ -7,6 +7,7 @@ digit [0-9]
 if                          return IF;
 then                        return THEN;
 while                       return WHILE;
+do                          return DO;
 for                         return FOR;
 switch                      return SWITCH;
 case                        return CASE;

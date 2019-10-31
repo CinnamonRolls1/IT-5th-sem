@@ -1,9 +1,14 @@
 %{
 #include<stdio.h>
 #include<stdlib.h>
+	extern int yylex(); 
+	
+	void yyerror (char const *s) {
+        fprintf (stderr, "%s\n", s);
+    }
 %}
 
-%token ID NUM SWITCH CASE DEFAULT BREAK LE GE EQ NE AND OR IF THEN WHILE FOR
+%token ID NUM SWITCH CASE DEFAULT BREAK LE GE EQ NE AND OR IF THEN WHILE FOR DO
 %right '='
 %left AND OR
 %left '<' '>' LE GE EQ NE
@@ -33,6 +38,7 @@ D   :   DEFAULT':'ST1 BREAK';'
     ;
 
 ST1 :   WHILE'('E2')' E';'
+    |   DO '{'E';''}' WHILE '('E2')'';'
     |   IF'('E2')'THEN E';'
     |   ST1 ST1
     |   FOR'('ASGN';'E2';'INC')' E';'   
@@ -76,6 +82,7 @@ E   :   ID'='E
     |   E OR E
     |   ID
     |   NUM
+    |   '{'ST1'}'
     ;
 
 %%

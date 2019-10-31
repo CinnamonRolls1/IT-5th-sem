@@ -5,6 +5,10 @@ switch(a){
     break;
     case 3: for(i=0;i<n;i++) b=2;
     break;
+    case 4: do {k=3;} while(b<2);
+    break;
+    case 5: for(j=0;j<m;j--) {for(i=0;i<n;i++) t=3;};
+    break;
     default: a=2;
     break;
 }
