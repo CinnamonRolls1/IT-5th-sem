@@ -1,0 +1,12 @@
+DROP TRIGGER IF EXISTS PATIENT_TRIGGER;
+DELIMITER //
+
+CREATE TRIGGER PATIENT_TRIGGER
+AFTER DELETE ON Patient
+FOR EACH ROW
+BEGIN
+    DELETE FROM Medicine WHERE OLD.patientID = Medicine.patientID;
+    DELETE FROM Bill WHERE OLD.patientID = Bill.patientID;
+    UPDATE Room SET status='Empty', patientID = NULL WHERE OLD.patientID = Room.patientID;
+END //
+DELIMITER ; 
